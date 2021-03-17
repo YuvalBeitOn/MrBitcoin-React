@@ -1,0 +1,14 @@
+@import "../../assets/scss/setup/mixins";
+
+.app-footer {
+  height: 40px;
+  width: 100%;
+  background-color: rgb(22, 82, 240);
+  font-size: 0.8rem;
+  // margin-top: 3rem;
+  color: white;
+  @include for-mobile-layout {
+    font-size: 0.7rem;
+    height: 30px;
+  }
+}

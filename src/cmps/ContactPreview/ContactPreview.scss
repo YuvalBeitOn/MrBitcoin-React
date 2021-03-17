@@ -1,0 +1,45 @@
+@import "../../assets/scss/setup/mixins";
+
+.contact-preview {
+  margin: 0 20px 16px 20px;
+  background-color: rgb(236, 236, 236);
+  border-radius: 10px;
+  padding: 10px 15px;
+  @include for-tablet-layout {
+    padding: 8px 12px;
+  }
+  > * {
+    font-weight: bold;
+    font-size: 1.3rem;
+    @include for-normal-layout {
+      font-size: 1.2rem;
+    }
+    @include for-tablet-layout {
+      font-size: 1.1rem;
+    }
+    @include for-mobile-layout {
+      font-size: 0.9rem;
+    }
+  }
+  > *:not(:last-child) {
+    margin-right: 15px;
+    @include for-tablet-layout {
+      margin-right: 10px;
+    }
+    @include for-mobile-layout {
+        margin-right: 7px;
+    }
+  }
+  img {
+    width: 50px;
+    border-radius: 50%;
+    @include for-tablet-layout {
+      width: 40px;
+    }
+  }
+  .contact-mail {
+    @include for-narrow-layout {
+      display: none;
+    }
+  }
+}

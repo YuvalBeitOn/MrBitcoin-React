@@ -1,0 +1,316 @@
+@import "../../assets/scss/setup/mixins";
+
+.home-page-conatiner {
+  min-height: calc(100vh - 40px);
+  padding-bottom: 8rem;
+  @include for-normal-layout {
+    padding-bottom: 5rem;
+  }
+  @include for-mobile-layout {
+    padding-bottom: 3rem;
+  }
+  .home-page {
+    margin-bottom: 5rem;
+    background-color: rgb(22, 82, 240);
+    color: white;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    @include for-tablet-layout {
+      padding-top: 3rem;
+      padding-bottom: 4rem;
+    }
+    @include for-narrow-layout {
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+      margin-bottom: 3rem;
+    }
+    @include for-mobile-layout {
+      padding-top: 1rem;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .title {
+      font-family: oxygen-bold;
+      font-size: 4.5rem;
+      font-weight: 900;
+      margin-bottom: 2rem;
+      @include for-wide-layout {
+        font-size: 3.5rem;
+      }
+      @include for-normal-layout {
+        font-size: 2.5rem;
+      }
+      @include for-narrow-layout {
+        font-size: 2rem;
+      }
+    }
+
+    .desc {
+      font-size: 1.5rem;
+      font-family: oxygen-regular;
+      margin-bottom: 2.5rem;
+      @include for-wide-layout {
+        font-size: 1.2rem;
+      }
+      @include for-normal-layout {
+        font-size: 1rem;
+      }
+      @include for-narrow-layout {
+        width: 400px;
+        text-align: center;
+      }
+      @include for-mobile-layout {
+        width: 300px;
+        text-align: center;
+      }
+    }
+
+    form {
+      width: 455px;
+      display: flex;
+      border-radius: 8px;
+      @include for-narrow-layout {
+        width: 350px;
+      }
+      @include for-mobile-layout {
+        width: 300px;
+        text-align: center;
+      }
+
+      button {
+        position: relative;
+        width: auto;
+        margin: 0px;
+        border-radius: 4px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        transition: all 80ms ease-in-out 0s;
+        padding: 24px;
+        border: 1px solid rgb(5, 177, 105);
+        background-color: rgb(5, 177, 105);
+        font-size: 1.1rem;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        @include for-narrow-layout {
+          padding: 10px 15px;
+          font-size: 0.9rem;
+        }
+      }
+
+      input {
+        flex: 1 1 0%;
+        margin-right: 10px;
+        padding: 13px 16px 15px;
+        border-radius: 4px;
+        appearance: none;
+        border: none;
+        font-family: Graphik, sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.75;
+        color: rgb(11, 52, 102);
+        @include for-narrow-layout {
+          padding: 10px 15px;
+          font-size: 0.9rem;
+        }
+        &::placeholder {
+          font-family: "Quicksand", sans-serif;
+          font-size: 1.1rem;
+          @include for-narrow-layout {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  .home-page-chart {
+    margin-bottom: 4rem;
+    @include for-tablet-layout {
+      display: none;
+    }
+
+    .chart {
+      border: 1px solid lightgray;
+      border-radius: 5px;
+      padding: 10px 40px 38px 0 !important;
+      width: 980px !important;
+      @include for-wide-layout {
+        width: 730px !important;
+        padding: 5px 10px 0 0 !important;
+      }
+      .recharts-legend-wrapper {
+        @include for-wide-layout {
+          display: none;
+        }
+      }
+      .recharts-surface {
+        @include for-wide-layout {
+          width: 730px !important;
+        }
+      }
+    }
+
+    .recharts-wrapper {
+      width: unset !important;
+    }
+  }
+  .imgs-section {
+    margin-bottom: 5rem;
+    @include for-narrow-layout {
+      margin-bottom: 3rem;
+    }
+    @include for-mobile-layout {
+      margin-bottom: 1.5rem;
+
+      flex-direction: column;
+    }
+    .img-container {
+      img {
+        width: 130px;
+        @include for-narrow-layout {
+          width: 110px;
+        }
+        @include for-mobile-layout {
+          width: 130px;
+        }
+      }
+
+      .desc {
+        font-size: 1.5rem;
+        font-weight: bold;
+        @include for-wide-layout {
+          font-size: 1.3rem;
+        }
+        @include for-normal-layout {
+          font-size: 1rem;
+        }
+        @include for-narrow-layout {
+          font-size: 14px;
+        }
+        @include for-mobile-layout {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+
+  .bg-img-section {
+    position: relative;
+    .bg-img {
+      width: 100%;
+      position: relative;
+      @include for-tablet-layout {
+        height: 220px;
+      }
+      @include for-narrow-layout {
+        height: 180px;
+      }
+      @include for-mobile-layout {
+        height: 160px;
+      }
+    }
+
+    .bg-img-txt {
+      position: absolute;
+      top: 30%;
+      padding-left: 5rem;
+      @include for-wide-layout {
+        top: 13%;
+      }
+      @include for-normal-layout {
+        padding-left: 3rem;
+        top: 8%;
+      }
+      @include for-tablet-layout {
+        padding-left: 2rem;
+        top: 5%;
+      }
+      @include for-narrow-layout {
+        padding-left: 1rem;
+      }
+      @include for-mobile-layout {
+        padding-left: 0.5rem;
+      }
+      //   width: 550px;
+      > * {
+        margin: 8px;
+      }
+      .par1 {
+        line-height: 1.3;
+        color: rgb(5, 15, 25);
+        font-size: 2.5rem;
+        font-weight: 500;
+        @include for-wide-layout {
+          width: 500px;
+          font-size: 2.2rem;
+        }
+        @include for-normal-layout {
+          font-size: 1.8rem;
+          width: 400px;
+        }
+        @include for-tablet-layout {
+          font-size: 1.4rem;
+          width: 300px;
+        }
+        @include for-narrow-layout {
+          font-size: 1.2rem;
+          width: 200px;
+        }
+        @include for-mobile-layout {
+          font-size: 1.2rem;
+          width: 185px;
+        }
+      }
+
+      .par2 {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        width: 400px;
+        @include for-normal-layout {
+          font-size: 1rem;
+        }
+        @include for-tablet-layout {
+          font-size: 1rem;
+          margin-bottom: 20px;
+          width: 250px;
+        }
+        @include for-narrow-layout {
+          font-size: 0.9rem;
+          margin-bottom: 15px;
+          width: 200px;
+        }
+        @include for-mobile-layout {
+          width: 185px;
+          margin-bottom: 0;
+        }
+      }
+      .start-btn {
+        position: relative;
+        font-size: 1.1rem;
+        border-radius: 4px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        transition: all 80ms ease-in-out 0s;
+        padding: 12px 16px;
+        border: 1px solid rgb(22, 82, 240);
+        background-color: rgb(22, 82, 240);
+        &:hover {
+          background-color: rgb(10, 70, 228);
+          border-color: rgb(10, 70, 228);
+        }
+        @include for-normal-layout {
+          font-size: 1rem;
+          padding: 8px 12px;
+        }
+        @include for-narrow-layout {
+          font-size: 0.9rem;
+          padding: 5px 10px;
+        }
+        @include for-mobile-layout {
+          display: none;
+        }
+      }
+    }
+  }
+}

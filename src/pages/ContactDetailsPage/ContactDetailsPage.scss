@@ -1,0 +1,153 @@
+@import "../../assets/scss/setup/mixins";
+
+.contact-details-page {
+  background-color: whitesmoke;
+  min-height: calc(100vh - 40px);
+  padding: 5rem 0;
+
+  @include for-normal-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include for-mobile-layout {
+    padding: 2rem 0;
+  }
+  .contact-details-container {
+    width: 400px;
+    height: 550px;
+    margin-right: 3rem;
+    @include for-normal-layout {
+      align-items: center;
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
+
+    @include for-mobile-layout {
+      height: 450px;
+    }
+
+    .contact-details {
+      @include for-normal-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .btns-section {
+      @include for-normal-layout {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      a,
+      .btn {
+        padding: 5px 10px;
+        border-radius: 4px;
+        background-color: rgb(22, 82, 240);
+        margin-right: 15px;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border: 2px solid transparent;
+        &:hover {
+          background-color: transparent;
+          color: unset;
+          border: 2px solid rgba(22, 84, 240, 0.788);
+        }
+
+        @include for-mobile-layout {
+          font-size: 0.9rem;
+        }
+      }
+      .next-prev-btns {
+        margin-top: 25px;
+        .fa-icon {
+          font-size: 1rem;
+          @include for-mobile-layout {
+            font-size: 0.8rem;
+          }
+          &.prev {
+            margin-right: 7px;
+            // @include for-normal-layout {
+            //   margin-right: 0px;
+            // }
+          }
+          &.next {
+            margin-left: 7px;
+            @include for-normal-layout {
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+    }
+
+    .contact-details {
+      > * {
+        padding: 5px;
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+        @include for-mobile-layout {
+          font-size: 1rem;
+        }
+        font-weight: bold;
+        letter-spacing: 0.5px;
+      }
+      img {
+        width: 220px;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        padding-top: 0;
+        @include for-mobile-layout {
+          width: 180px;
+        }
+      }
+    }
+  }
+  .transfer-section {
+    margin-left: 3rem;
+    height: 520px;
+
+    @include for-tablet-layout {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
+    @include for-normal-layout {
+      margin: 0;
+    }
+    @include for-mobile-layout {
+      height: fit-content;
+    }
+    .transfer-title,
+    input,
+    button {
+      @include for-mobile-layout {
+        font-size: 1rem !important;
+      }
+    }
+    input {
+      @include for-mobile-layout {
+        width: 200px !important;
+      }
+    }
+    .no-moves {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    .moves-list {
+      box-shadow: 0px 1px 11px #82acc199;
+      @include for-mobile-layout {
+        max-height: 180px !important;
+      }
+    }
+    .move-preview {
+      @include for-mobile-layout {
+        font-size: 1rem;
+      }
+    }
+  }
+}

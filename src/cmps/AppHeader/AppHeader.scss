@@ -1,0 +1,118 @@
+@import "../../assets/scss/setup/mixins";
+
+.app-header {
+  background-color: rgb(22, 82, 240);
+  color: #ffffff;
+  border: none;
+  position: relative;
+  .bars {
+    display: none;
+    @include for-tablet-layout {
+      display: block;
+      background-color: transparent;
+      color: white;
+      font-size: 1.6rem;
+      padding: 0;
+    }
+  }
+
+  .main-title {
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-right: 20px;
+    margin-bottom: 7px;
+    @include for-normal-layout {
+      font-size: 2rem;
+    }
+    @include for-tablet-layout {
+      display: none;
+    }
+    @include for-mobile-layout {
+      font-size: 1.5rem;
+    }
+  }
+
+  .nav-container {
+    .nav-bar {
+      font-size: 1.4rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      @include for-normal-layout {
+        font-size: 1.2rem;
+      }
+      @include for-tablet-layout {
+        position: absolute;
+        color: rgb(37, 37, 37);
+        left: -129px;
+        top: 53.5px;
+        background-color: whitesmoke;
+        border: 1px solid gray;
+        border-radius: 5px;
+        z-index: 2;
+        width: 130px;
+        transform: translateX(100%);
+        transition: transform 0.8s;
+        min-height: 120px;
+        justify-content: space-around;
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+        &.showen {
+          transform: translateX(-95%);
+          
+        }
+      }
+      @include for-mobile-layout {
+        font-size: 1rem;
+      }
+      
+      > *:not(:last-child) {
+        margin-right: 15px;
+      }
+      > * {
+        @include for-tablet-layout {
+          font-size: 1.3rem;
+          margin-right: 0px;
+          padding:  5px;
+        }
+      }
+    }
+
+    .login-section {
+      font-size: 1.2rem;
+      width: fit-content;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      @include for-normal-layout {
+        font-size: 1rem;
+      }
+      @include for-mobile-layout {
+        font-size: 0.9rem;
+      }
+
+      .profile {
+        margin-right: 15px;
+      }
+      .get-started {
+        white-space: nowrap;
+        position: relative;
+        width: auto;
+        margin: 0px;
+        border-radius: 4px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        transition: all 80ms ease-in-out 0s;
+        padding: 12px 16px;
+        border: 1px solid rgb(255, 255, 255);
+        background-color: transparent;
+        &:hover {
+          color: rgb(38, 53, 67);
+          background-color: rgb(255, 255, 255);
+        }
+        @include for-tablet-layout {
+         padding: 8px 12px;
+        }
+      }
+    }
+  }
+}

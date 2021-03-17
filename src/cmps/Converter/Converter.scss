@@ -1,0 +1,129 @@
+@import "../../assets/scss/setup/mixins";
+
+.converter-container {
+  margin-bottom: 5rem;
+  @include for-narrow-layout {
+    margin-bottom: 3rem;
+  }
+
+  .convert-form {
+    height: 300px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: fit-content;
+    font-size: 2rem;
+    @include for-normal-layout {
+      height: 200px;
+    }
+    @include for-tablet-layout {
+      height: 150px;
+    }
+    @include for-narrow-layout {
+      height: 130px;
+    }
+    @include for-mobile-layout {
+      padding: 5px 10px;
+      height: 120px;
+
+    }
+    input,
+    select,
+    .from-currency {
+      font-size: 2rem;
+      padding: 8px 12px;
+      outline: none;
+      border: none;
+      background-color: #eee;
+      border-radius: 4px;
+      color: #444;
+      @include for-normal-layout {
+        font-size: 1.6rem;
+      }
+      @include for-tablet-layout {
+        font-size: 1.2rem;
+      }
+      @include for-narrow-layout {
+        font-size: 1rem;
+      }
+      @include for-mobile-layout {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+      }
+    }
+
+    select,
+    button {
+      cursor: pointer;
+    }
+
+    input::placeholder {
+      color: #444;
+    }
+
+    .fa-icon,
+    input,
+    .from-currency {
+      margin-right: 15px;
+      @include for-mobile-layout {
+        margin-right: 8px;
+      }
+    }
+
+    .fa-icon {
+      color: #15a2db;
+      font-size: 2.4rem;
+      @include for-tablet-layout {
+        font-size: 1.5rem;
+      }
+      @include for-narrow-layout {
+        font-size: 1rem;
+      }
+    }
+    button {
+      border: 1px #15a2db solid;
+      color: #15a2db;
+      width: 100%;
+      padding: 15px 20px;
+      font-size: 1.2em;
+      font-family: inherit;
+      opacity: 0.4;
+      border-radius: 4px;
+      color: #444;
+      @include for-normal-layout {
+        font-size: 1rem;
+        padding: 10px 15px;
+      }
+      @include for-tablet-layout {
+        padding: 5px 10px;
+      }
+    }
+    .validation-error {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: red;
+    }
+
+    .result {
+      font-weight: bold;
+      padding: 10px 0;
+      @include for-normal-layout {
+        font-size: 1rem;
+      }
+      .given-amount,
+      .final-result {
+        margin-right: 5px;
+      }
+      .base-currency {
+        margin-right: 10px;
+      }
+      .fa-icon {
+        color: #444;
+        font-size: 2rem;
+        @include for-normal-layout {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
